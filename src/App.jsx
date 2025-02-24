@@ -11,15 +11,17 @@ export const tabs = [
 ];
 
 export const App = () => {
-  const [activeTabId, setActiveTabId] = useState('tab-1'); 
+  const [activeTabId, setActiveTabId] = useState('tab-1');
 
-  const handleTabSelected = (tabId) => {
+  const handleTabSelected = tabId => {
     setActiveTabId(tabId);
   };
 
   return (
     <div className="section">
-      <h1 className="title">Selected tab is {tabs.find(tab => tab.id === activeTabId)?.title}</h1>
+      <h1 className="title">
+        Selected tab is {tabs.find(tab => tab.id === activeTabId)?.title}
+      </h1>
 
       <div data-cy="TabsComponent">
         <div className="tabs is-boxed">
